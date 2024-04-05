@@ -1,0 +1,35 @@
+﻿
+@*@{
+    Layout = null;
+}*@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index1</title>
+</head>
+<body>
+    <div>
+
+        <h1> Index1 View Content </h1>
+
+        <p>Data From ViewData Set in Index Action Method : @ViewData["name"]</p>
+        @*here data will not come from Index page because it has scope of same / single request*@
+
+        <hr />
+
+        <p>Data From ViewBag Set in Index Action Method : @ViewBag.Email</p>
+
+        <hr />
+
+        <p>Accesing Data from  TempData  :  @TempData["address"]</p>
+
+
+        <hr />
+
+
+    </div>
+</body>
+</html>

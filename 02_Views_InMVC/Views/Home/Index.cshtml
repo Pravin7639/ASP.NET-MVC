@@ -1,0 +1,90 @@
+﻿
+
+@*@using _02_Views_InMVC.Common;     instead of this we can write this in web.Config file*@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+
+        <h1>Index View Content</h1>
+        <!--<input type="text" />
+    <input type="button" value="Submit" />
+
+    <hr />
+
+    @Html.TextBox("txtName")
+    <br />
+    @Html.Password("txtPassword")
+    <br />
+    @Html.TextArea("txtAddress")
+    <br />
+    @Html.ActionLink("Open Index1", "Index1")
+    <br />
+    @Html.Button("button", "Click Me !!!")-->
+        @* we can also write our own custom methods
+
+        @Html.Button("submit", "Log In ")*@
+
+
+        <hr />
+
+        <p> Data From ViewData : @ViewData["name"]</p>
+        <p> Data From ViewData in Capital Letters : @ViewData["name"].ToString().ToUpper()</p>
+
+        @Html.ActionLink("Open Index1", "Index1")
+
+        <hr />
+        <p>Data From ViewBag : @ViewBag.Email</p>
+        <p>Data From ViewBag : @ViewBag.Email.ToUpper()</p>
+
+
+        <hr />
+
+        <p>Accesing ViewData using ViewBag  : @ViewBag.name</p>
+        <p>Accesing ViewData using ViewBag in upper  : @ViewBag.name.ToUpper()</p>
+
+
+        <p>Accesing ViewBag using ViewData  : @ViewData["Email"]</p>
+        <p>Accesing ViewBag using ViewData  : @ViewData["Email"].ToString().ToUpper()</p>
+
+
+
+
+
+        <hr />
+
+        @*<p> Data from  TempData  :  @TempData["address"]</p>
+        <p> Data from  TempData in Upper  :  @TempData["address"].ToString().ToUpper()</p>*@
+
+
+        @*@{
+            TempData.Keep("address");
+        }*@
+
+
+        <p> Data from  TempData  :  @TempData.Peek("address")</p>
+        <p> Data from  TempData in Upper  :  @TempData.Peek("address").ToString().ToUpper()</p>
+
+
+
+
+
+
+        <p>Accesing TempData using ViewBag  : @ViewBag.address</p>
+        <p>Accesing TempData using ViewData  : @ViewData["address"]</p>
+
+
+
+
+
+
+
+    </div>
+</body>
+</html>
