@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
 
-namespace _03_MVC_CRUD_UsingDBFirstApproch
+namespace _05_AreaAndFilters
 {
     public class RouteConfig
     {
@@ -16,7 +16,8 @@ namespace _03_MVC_CRUD_UsingDBFirstApproch
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Student", action = "Index", id = UrlParameter.Optional }
+                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional },
+                namespaces: new string[] { "_05_AreaAndFilters.Controllers" } // confusion occured because we have multiple home controller
             );
         }
     }
